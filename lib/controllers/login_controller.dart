@@ -17,7 +17,7 @@ class LoginController extends GetxController {
   TextEditingController numberController = TextEditingController();
   TextEditingController otpController = TextEditingController();
   TextEditingController nameController = TextEditingController();
-  String code = "+92";
+  String code = "+967";
   RxString numberError = RxString("");
   RxString nameError = RxString("");
   RxString pinError = RxString("");
@@ -38,7 +38,7 @@ class LoginController extends GetxController {
   void sendOTP() async {
     if (numberController.text.isEmpty) {
       numberError("Field is required");
-    } else if (numberController.text.length < 10) {
+    } else if (numberController.text.length < 9) {
       numberError.value = "Invalid Number";
     } else {
       numberError("");
